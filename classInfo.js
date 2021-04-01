@@ -36,17 +36,8 @@ class Human {
   }
 }
 
-const alice = new Human('Alice', 'Liddell', 28, ['Html', 'Php'])
-const bob = new Human('Bob', 'Lemon', 30, ['Perl', 'Python', 'Java'])
-const charlie = new Human('Charlie', 'Charlot', 8, ['NodeJS', 'Javascript', 'Sql'])
+/* EXPORT DE NOTRE CLASS */
+//Le 1er therme .Human aurrait pu prendre un autres nom plus parlant de la fonction comme "infos"
+//et le second therme après = est le nom de notre Class
 
-console.log(alice.printInfo())
-console.log(bob.printInfo())
-console.log(charlie.printInfo())
-console.log(alice.canVote())
-console.log(bob.canVote())
-console.log(charlie.canVote())
-console.log(bob.mostSkilledDev(alice))
-console.log(bob.mostSkilledDev(charlie))
-console.log(alice.mostSkilledDev(charlie))
-
+exports.Human = Human
