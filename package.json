@@ -2,5 +2,7 @@
   "name": "oop-1",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/BsK-Coding/oop-1.git",
+  "author": "BsK-Coding <blackshark.blog@gmail.com>"
 }
