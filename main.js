@@ -27,7 +27,7 @@ console.log(alice.canVote())
 console.log(bob.canVote())
 console.log(charlie.canVote())
 
-console.log(`\nRetour da la personne connaissant le plus de langages de programmations :\n`)
+console.log(`\nRetour de la différence de langages de programmations d'une personne à l'autre :\n`)
 console.log(bob.mostSkilledDev(alice))
 console.log(bob.mostSkilledDev(charlie))
 console.log(alice.mostSkilledDev(charlie))
