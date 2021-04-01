@@ -2,7 +2,12 @@
 
 const { Point } = require('./point')
 const { Human } = require('./classInfo')
+
+const p1 = new Point(1, 2)        // const p1 = new Point(x, y) => Point de départ "this"
+const p2 = new Point(10, 11)      // const p2 = new Point(x, y) => Point d'arriver "end"
 const p1 = new Point(10, 12)
+
+p1.distance(p2)
 
 const alice = new Human('Alice', 'Liddell', 28, ['Html', 'Php'])
 const bob = new Human('Bob', 'Lemon', 30, ['Perl', 'Python', 'Java'])
