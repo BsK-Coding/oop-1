@@ -21,17 +21,17 @@ class Human {
       `age: ${this.age}`
   }
   canVote() {
-    return this.age > 18 ? true : false
+    return this.age > 18 ? (`${this.firstName} à un droit de vote: true`) : (`${this.firstName} à un droit de vote: false`)
   }
-  mostSkilledDev(person, person2) {
+  mostSkilledDev(person) {
     if (this.language.length > person.language.length) {
-      return (`${this.firstName} à ${this.language.length - person.language.length} langage de plus que ${person.firstName}`)
+      return `${this.firstName} à ${this.language.length - person.language.length} langage de plus que ${person.firstName}`
     }
-    else if (this.language.length > person2.language.length) {
-      return (`${this.firstName} à ${this.language.length - person2.language.length} langage de plus que ${person2.firstName}`)
+    else if (this.language.length < person.language.length) {
+      return `${person.firstName} à ${person.language.length - this.language.length} langage de plus que ${this.firstName}`
     }
     else {
-      return "draw"
+      return `draw: ${this.firstName} connait le même nombre de langages que ${person.firstName}`
     }
   }
 }
@@ -46,7 +46,9 @@ console.log(charlie.printInfo())
 console.log(alice.canVote())
 console.log(bob.canVote())
 console.log(charlie.canVote())
-console.log(bob.mostSkilledDev(alice, charlie))
+console.log(bob.mostSkilledDev(alice))
+console.log(bob.mostSkilledDev(charlie))
+console.log(alice.mostSkilledDev(charlie))
 
 /*
 
