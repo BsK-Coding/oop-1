@@ -73,12 +73,12 @@ La majorité est à 18 ans.
 /* FONCTION CANVOTE */
 
 const canVote = (person) => {
-  person.age > 18 ? console.log(`true`) : console.log(`false`)
+  return person.age > 18 ? true : false
 }
 
-canVote(alice)
-canVote(bob)
-canVote(charlie)
+console.log(canVote(alice))
+console.log(canVote(bob))
+console.log(canVote(charlie))
 
 
 /*
@@ -92,12 +92,19 @@ En cas d'égalité draw sera retourné.
 
 const mostSkilledDev = (person1, person2) => {
   if (person1.language.length > person2.language.length) {
-    return (`${person1.firstName} à ${person1.language.length - person2.language.length} langage de plus que ${person2.firstName}`)
+    return `${person1.firstName} à ${person1.language.length - person2.language.length} langage de plus que ${person2.firstName}`
+  }
+  else if (person1.language.length < person2.language.length) {
+    return `${person2.firstName} à ${person2.language.length - person1.language.length} langage de plus que ${person1.firstName}`
   }
   else {
-    return "draw"
+    return `draw: ${person1.firstName} connait le même nombre de langages que ${person2.firstName}`
   }
-
 }
 
+console.log(mostSkilledDev(alice, bob))
+console.log(mostSkilledDev(alice, charlie))
+console.log(mostSkilledDev(bob, charlie))
 console.log(mostSkilledDev(bob, alice))
+console.log(mostSkilledDev(charlie, alice))
+console.log(mostSkilledDev(charlie, bob))
